@@ -1,3 +1,7 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+}
 
 group 'com.fsconceicao.open_document'
 version '1.0-SNAPSHOT'
@@ -22,11 +26,6 @@ rootProject.allprojects {
     }
 }
 
-plugins {
-    id 'com.android.library'
-    id 'kotlin-android'
-}
-
 android {
     compileSdkVersion 35
     namespace 'com.rodrigao.open_document_custom'
@@ -34,16 +33,18 @@ android {
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
+
     defaultConfig {
         minSdkVersion 19
     }
+
     lintOptions {
         disable 'InvalidPackage'
     }
 
     compileOptions {
-    sourceCompatibility JavaVersion.VERSION_17
-    targetCompatibility JavaVersion.VERSION_17
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
 
     kotlinOptions {
@@ -52,5 +53,5 @@ android {
 }
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 }
