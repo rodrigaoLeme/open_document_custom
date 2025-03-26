@@ -26,13 +26,14 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion 33
+    compileSdkVersion 34
+    namespace 'com.rodrigao.open_document_custom'
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
     defaultConfig {
-        minSdkVersion 16
+        minSdkVersion 19
     }
     lintOptions {
         disable 'InvalidPackage'
